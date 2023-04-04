@@ -1,3 +1,67 @@
 [gd_scene format=3 uid="uid://d18u1mwlsohrv"]
 
 [node name="ProgramMain" type="Node"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+auto_translate = false
+localize_numeral_system = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+auto_translate = false
+localize_numeral_system = false
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="CenterLogo" type="CenterContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+
+[node name="ButtonContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+auto_translate = false
+localize_numeral_system = false
+
+[node name="PROGRAM_MAIN_START_GAME" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer"]
+layout_mode = 2
+text = "开始游戏"
+
+[node name="PROGRAM_MAIN_CONTINUE_GAME" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer"]
+visible = false
+layout_mode = 2
+text = "继续游戏"
+
+[node name="PROGRAM_MAIN_MULTIPLAYER" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer" groups=["ProgramMainMenu"]]
+layout_mode = 2
+disabled = true
+text = "多人游戏"
+
+[node name="PROGRAM_MAIN_EDITOR" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer"]
+layout_mode = 2
+text = "编辑器"
+
+[node name="PROGRAM_MAIN_MODS_AND_RESOURCE" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer" groups=["ProgramMainMenu"]]
+layout_mode = 2
+text = "模组和资源"
+
+[node name="PROGRAM_MAIN_OPTIONS" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer" groups=["ProgramMainMenu"]]
+layout_mode = 2
+text = "选项"
+
+[node name="PROGRAM_MAIN_ABOUT" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer"]
+layout_mode = 2
+text = "关于"
+
+[node name="PROGRAM_MAIN_EXIT" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer" groups=["ProgramMainMenu"]]
+layout_mode = 2
+text = "退出游戏"

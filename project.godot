@@ -13,26 +13,35 @@ config_version=5
 config/name="Civilizations-Road"
 run/main_scene="res://Scenes/Program/ProgramLoading.tscn"
 config/features=PackedStringArray("4.0", "C#", "Mobile")
+run/max_fps=256
+run/low_processor_mode=true
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=50
+
+[autoload]
+
+Configuration="*res://Scripts/Common/Configuration.cs"
+FpsCounter="*res://Components/Program/FPSCounter.tscn"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/vsync/vsync_mode=0
 window/stretch/mode="canvas_items"
 
 [dotnet]
 
 project/assembly_name="Civilizations-Road"
 
-[internationalization]
+[editor]
 
-locale/translations=PackedStringArray("res://Assets/Localization/program.en_US.translation", "res://Assets/Localization/program.ru_RU.translation", "res://Assets/Localization/program.zh_CN.translation")
+movie_writer/fps=30
 
 [physics]
 
-common/physics_ticks_per_second=30
+2d/run_on_separate_thread=true
+3d/run_on_separate_thread=true
+common/physics_ticks_per_second=20
 
 [rendering]
 

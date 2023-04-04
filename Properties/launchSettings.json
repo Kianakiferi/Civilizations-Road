@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Civilizations-Road": {
+      "commandName": "Project",
+      "commandLineArgs": "--path\r\n--verbose"
+    },
+    "Launch": {
+      "commandName": "Project",
+      "commandLineArgs": "--path\r\n--verbose",
+      "remoteDebugEnabled": false,
+      "nativeDebugging": false
+    }
+  }
+}

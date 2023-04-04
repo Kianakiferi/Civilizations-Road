@@ -1,0 +1,49 @@
+# Don't remove the two lines below, they're required for gettext to work correctly.
+msgid ""
+msgstr ""
+"Project-Id-Version: Civilizations-Road-1.0.0\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Meamscafyeas@outlook.com\n"
+"Language-Team: Chinese (simplified)\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-SourceKey: msgstr\n"
+
+msgctxt "UI, Game Main Screen, Button label. Start game"
+msgid "PROGRAM_MAIN_START_GAME"
+msgstr ""
+
+msgctxt "UI, Game Main Screen, Button label. Begin a new game"
+msgid "PROGRAM_MAIN_NEW_GAME"
+msgstr ""
+
+msgctxt "UI, Game Main Screen, Button label. Continue last game"
+msgid "PROGRAM_MAIN_CONTINUE_GAME"
+msgstr ""
+
+msgctxt "UI, Game Main Screen, Button label. Multiplayer mode"
+msgid "PROGRAM_MAIN_MULTIPLAYER"
+msgstr ""
+
+msgctxt "UI, Game Main Screen, Button label. Game built-in editor"
+msgid "PROGRAM_MAIN_EDITOR"
+msgstr ""
+
+msgctxt "UI, Game Main Screen, Button label. Game mods and resources"
+msgid "PROGRAM_MAIN_MODS_AND_RESOURCES"
+msgstr ""
+
+msgctxt "UI, Game Main Screen, Button label. Options or settings of this game"
+msgid "PROGRAM_MAIN_OPTIONS"
+msgstr ""
+
+msgctxt "UI, Game Main Screen, Button label. About this game"
+msgid "PROGRAM_MAIN_ABOUT"
+msgstr ""
+
+msgctxt "UI, Game Main Screen, Button label. Exit game"
+msgid "PROGRAM_MAIN_EXIT"
+msgstr ""

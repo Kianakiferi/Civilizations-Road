@@ -1,0 +1,49 @@
+# Don't remove the two lines below, they're required for gettext to work correctly.
+msgid ""
+msgstr ""
+"Project-Id-Version: Civilizations-Road-1.0.0\n"
+"PO-Revision-Date: 2023-04-05 03:45+0800\n"
+"Last-Translator: <EMAIL@ADDRESS>\n"
+"Language-Team: Chinese (simplified)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-SourceKey: msgstr\n"
+
+msgctxt "UI, Game Main Screen, Button label. Start game"
+msgid "PROGRAM_MAIN_START_GAME"
+msgstr "开始游戏"
+
+msgctxt "UI, Game Main Screen, Button label. Begin a new game"
+msgid "PROGRAM_MAIN_NEW_GAME"
+msgstr "新游戏"
+
+msgctxt "UI, Game Main Screen, Button label. Continue last game"
+msgid "PROGRAM_MAIN_CONTINUE_GAME"
+msgstr "继续游戏"
+
+msgctxt "UI, Game Main Screen, Button label. Multiplayer mode"
+msgid "PROGRAM_MAIN_MULTIPLAYER"
+msgstr "多人游戏"
+
+msgctxt "UI, Game Main Screen, Button label. Game built-in editor"
+msgid "PROGRAM_MAIN_EDITOR"
+msgstr "编辑器"
+
+msgctxt "UI, Game Main Screen, Button label. Game mods and resources"
+msgid "PROGRAM_MAIN_MODS_AND_RESOURCES"
+msgstr "模组和资源"
+
+msgctxt "UI, Game Main Screen, Button label. Options or settings of this game"
+msgid "PROGRAM_MAIN_OPTIONS"
+msgstr "选项"
+
+msgctxt "UI, Game Main Screen, Button label. About this game"
+msgid "PROGRAM_MAIN_ABOUT"
+msgstr "关于"
+
+msgctxt "UI, Game Main Screen, Button label. Exit game"
+msgid "PROGRAM_MAIN_EXIT"
+msgstr "退出游戏"

@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccqqxfwfb4to8"]
+[gd_scene load_steps=3 format=3 uid="uid://pmkv8a87qulx"]
 
-[ext_resource type="Theme" uid="uid://bcu1e8u5s6idv" path="res://Assets/Themes/DefaultThemeDark.tres" id="1_a52rn"]
+[ext_resource type="Theme" uid="uid://bcu1e8u5s6idv" path="res://Assets/DefaultThemeDark.tres" id="1_a52rn"]
 [ext_resource type="Script" path="res://Scenes/Program/ProgramLoading.cs" id="1_w5dy4"]
 
 [node name="ProgramLoading" type="Control"]
@@ -11,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_w5dy4")
+metadata/_edit_lock_ = true
 
 [node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 

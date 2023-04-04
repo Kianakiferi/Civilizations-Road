@@ -8,8 +8,6 @@ public static class Variables
     
     public static class Program
     {
-        public static string ProgramMainSceneName = "ProgramMain";
-
         public static HashSet<string> ResourcePaths = new()
         {
             "res://Scenes/Program/ProgramMain.tscn",

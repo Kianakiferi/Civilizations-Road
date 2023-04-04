@@ -2,7 +2,6 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using Godot;
-using Array = Godot.Collections.Array;
 using CivilizationsRoad.Scripts.Common;
 
 namespace CivilizationsRoad.Scenes.Program;
@@ -17,31 +16,19 @@ public partial class ProgramLoading : Control
 
     //private Node rootNode;
     private ProgressBar progressBar;
-    private Array Progress;
-
     private Dictionary<string, bool> resourcesToLoad;
     public override void _Ready()
     {
-        //rootNode = GetTree().Root;
-        resourcesToLoad = GetResources();
-        ResourcesCount = resourcesToLoad.Count;
-
-        foreach (var item in resourcesToLoad)
-        {
-            // TODO: 确定CacheMode
-            var error = ResourceLoader.LoadThreadedRequest(item.Key);
-            if (error is not Error.Ok)
-            {
-                GD.Print(error);
-            }
-        }
+        Scripts.Common.Program.FrameRateHelper.SetPhysicsRate(1);
+        SetFPSCounter();
+        BeginLoadResources();
     }
-
+  
     public override void _Process(double delta)
     {
         foreach (var item in resourcesToLoad)
         {
-            if (item.Value is false)
+            if (item.Value == false)
             {
                 var state = ResourceLoader.LoadThreadedGetStatus(item.Key);
 
@@ -60,21 +47,45 @@ public partial class ProgramLoading : Control
         if (LoadingProgress == ResourcesCount)
         {
             GD.Print("加载完成");
-            if (Variables.Program.Resources.ContainsKey(Variables.Program.ProgramMainSceneName))
+            if (Variables.Program.Resources.ContainsKey(Constants.Program.ProgramMainSceneName))
             {
-                var prograMain = (PackedScene)Variables.Program.Resources[Variables.Program.ProgramMainSceneName];
+                var prograMain = (PackedScene)Variables.Program.Resources[Constants.Program.ProgramMainSceneName];
 
                 GetTree().ChangeSceneToPacked(prograMain);
+                GetTree().CurrentScene.Free();
             }
             else
             {
-                GD.PrintErr($"{Strings.Program.Error.ResourceNotFoundOrLoaded} => {Variables.Program.ProgramMainSceneName}");
+                GD.PrintErr($"{Strings.Program.Error.ResourceNotFoundOrLoaded} => {Constants.Program.ProgramMainSceneName}");
             }
 
         }
     }
 
-    private Dictionary<string, bool> GetResources() => Variables.Program.ResourcePaths.ToDictionary(i => i, i => false);
+    private void SetFPSCounter()
+    {
+        var fpsCounter = GetNode<Control>(Constants.Program.AutoLoad.FPSCounterNodePath);
 
+        fpsCounter.Visible = Configuration.Program.DisplayFPSCounter;
+    }
+
+    private void BeginLoadResources()
+    {
+        resourcesToLoad = GetResources();
+
+        ResourcesCount = resourcesToLoad.Count;
+
+        foreach (var item in resourcesToLoad)
+        {
+            // TODO: 确定CacheMode
+            var error = ResourceLoader.LoadThreadedRequest(item.Key);
+            if (error != Error.Ok)
+            {
+                GD.Print(error);
+            }
+        }
+    }
+
+    private Dictionary<string, bool> GetResources() => Variables.Program.ResourcePaths.ToDictionary(i => i, i => false);
 
 }
