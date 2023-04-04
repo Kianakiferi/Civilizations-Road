@@ -1,0 +1,6 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://crq2weyfggska"]
+
+[ext_resource type="FontFile" uid="uid://j3a8ha1q2ea8" path="res://Assets/Fonts/HarmonyOS_Sans_SC_Regular.ttf" id="1_8j7yq"]
+
+[resource]
+base_font = ExtResource("1_8j7yq")

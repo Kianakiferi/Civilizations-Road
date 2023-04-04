@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://djlm7qtcd0gu8"]
+
+[ext_resource type="Texture2D" uid="uid://4x1sqn5fobev" path="res://Assets/Textures/SlimplexNoiseTexture2D.tres" id="1_p053t"]
+
+[node name="TestGameScene" type="Node2D"]
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_right = 240.0
+offset_bottom = 83.0
+theme_override_font_sizes/font_size = 60
+text = "测试场景"
+
+[node name="GREETING" type="Label" parent="."]
+offset_top = 256.0
+offset_right = 291.0
+offset_bottom = 342.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 60
+text = "GREETING"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(744, 392)
+texture = ExtResource("1_p053t")

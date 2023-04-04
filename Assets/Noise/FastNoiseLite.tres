@@ -1,0 +1,6 @@
+[gd_resource type="FastNoiseLite" format=3 uid="uid://dwg4d126rjxs5"]
+
+[resource]
+noise_type = 0
+seed = 262144
+frequency = 0.005

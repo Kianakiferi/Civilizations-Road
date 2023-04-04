@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://i82qq3ll52lq"
+
+[deps]
+
+files=["res://Assets/Localization/civilizations.zh_CN.translation", "res://Assets/Localization/civilizations.en_US.translation", "res://Assets/Localization/civilizations.ru_RU.translation"]
+
+source_file="res://Assets/Localization/civilizations.csv"
+dest_files=["res://Assets/Localization/civilizations.zh_CN.translation", "res://Assets/Localization/civilizations.en_US.translation", "res://Assets/Localization/civilizations.ru_RU.translation"]
+
+[params]
+
+compress=true
+delimiter=0

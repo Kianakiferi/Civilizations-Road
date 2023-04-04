@@ -1,0 +1,11 @@
+id,zh_CN,en_US,ru_RU
+PROGRAM_MAIN_START_GAME,开始游戏,Start Game,Начать игру
+PROGRAM_MAIN_NEW_GAME,新游戏,New Game,Новая игра
+PROGRAM_MAIN_CONTINUE_GAME,继续游戏,Continue Game,Продолжить игру
+PROGRAM_MAIN_MULTI——PLAYER,多人游戏,Multiplayer,Мультиплеер
+PROGRAM_MAIN_MODS,模组,Mods,Моды
+PROGRAM_MAIN_OPTIONS,选项,Options,Параметры
+PROGRAM_MAIN_ABOUT,关于,About,Об этой игре
+PROGRAM_MAIN_EXIT,退出,Exit,Выход
+
+GREETING,你好 Godot！,Hello Godot!,Привет Godot!
