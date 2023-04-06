@@ -1,0 +1,11 @@
+{
+    "name": ".NET Core Attach",
+    "type": "coreclr",
+    "request": "launch",
+    "preLaunchTask": "build",
+    "program": "${env:GODOT4}",
+    "args": [],
+    "cwd": "${workspaceFolder}",
+    "stopAtEntry": false,
+},
+    "executable": "C:/Surface/Apps/Godot_v4.0.2-stable_mono_win64/Godot_v4.0.2-stable_mono_win64.exe",

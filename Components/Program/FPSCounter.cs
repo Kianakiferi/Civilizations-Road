@@ -8,6 +8,6 @@ public partial class FPSCounter : Label
 	{
 		var fps = Engine.GetFramesPerSecond().ToString();
 
-		Text = fps;
+		this.Text = fps;
 	}
 }

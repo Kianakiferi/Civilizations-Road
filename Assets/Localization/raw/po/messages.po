@@ -14,4 +14,4 @@ msgstr ""
 
 msgctxt "Message, 'Hello, Godot!' message"
 msgid "GREETING"
-msgstr "你好 Godot！"
+msgstr "你好，Godot！"

@@ -5,6 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "C:/Surface/Apps/Godot_v4.0.2-stable_mono_win64/Godot_v4.0.2-stable_mono_win64.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+        },
+        {
             "name": "Play in Editor",
             "type": "godot-mono",
             "mode": "playInEditor",
@@ -16,7 +26,7 @@
             "request": "launch",
             "mode": "executable",
             "preLaunchTask": "build",
-            "executable": "C:/Surface/Apps/Godot_v4.0.1-stable_mono_win64/Godot_v4.0.1-stable_mono_win64.exe",
+            "executable": "C:/Surface/Apps/Godot_v4.0.2-stable_mono_win64/Godot_v4.0.2-stable_mono_win64.exe",
             // See which arguments are available here:
             // https://docs.godotengine.org/en/stable/getting_started/editor/command_line_tutorial.html
             "executableArguments": [
@@ -30,7 +40,7 @@
             "request": "launch",
             "mode": "executable",
             "preLaunchTask": "build",
-            "executable": "C:/Surface/Apps/Godot_v4.0.1-stable_mono_win64/Godot_v4.0.1-stable_mono_win64.exe",
+            "executable": "C:/Surface/Apps/Godot_v4.0.2-stable_mono_win64/Godot_v4.0.2-stable_mono_win64.exe",
             // See which arguments are available here:
             // https://docs.godotengine.org/en/stable/getting_started/editor/command_line_tutorial.html
             "executableArguments": [
@@ -41,10 +51,12 @@
         },
         {
             "name": "Attach",
-            "type": "core",
+            "type": "godot-mono",
             "request": "attach",
             "address": "localhost",
             "port": 23685
         }
+
+        
     ]
 }

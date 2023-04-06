@@ -3,7 +3,24 @@
     "tasks": [
         {
             "label": "build",
-            "command": "C:/Surface/Apps/Godot_v4.0.1-stable_mono_win64/Godot_v4.0.1-stable_mono_win64.exe",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build"
+            ],
+            "problemMatcher": "$msCompile",
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            }
+        },
+        {
+            "label": "build2",
+            "command": "C:/Surface/Apps/Godot_v4.0.2-stable_mono_win64/Godot_v4.0.2-stable_mono_win64.exe",
             "type": "process",
             "args": [
                 "--build-solutions",

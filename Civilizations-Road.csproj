@@ -22,4 +22,7 @@
     <None Include="Assets\Localization\program.csv" />
     <None Include="Assets\Localization\tips.csv" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="YamlDotNet" Version="13.0.2" />
+  </ItemGroup>
 </Project>

@@ -20,7 +20,6 @@ boot_splash/minimum_display_time=50
 
 [autoload]
 
-Configuration="*res://Scripts/Common/Configuration.cs"
 FpsCounter="*res://Components/Program/FPSCounter.tscn"
 
 [display]
