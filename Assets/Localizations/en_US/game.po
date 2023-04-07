@@ -1,0 +1,27 @@
+# Don't remove the two lines below, they're required for gettext to work correctly.
+msgid ""
+msgstr ""
+"Project-Id-Version: civilizations-road\n"
+"PO-Revision-Date: 2023-04-07 03:16\n"
+"Last-Translator: <EMAIL@ADDRESS>\n"
+"Language-Team: English, United States\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-SourceKey: msgstr\n"
+"X-Crowdin-Project: civilizations-road\n"
+"X-Crowdin-Project-ID: 578901\n"
+"X-Crowdin-Language: en-US\n"
+"X-Crowdin-File: /zh_CN/game.po\n"
+"X-Crowdin-File-ID: 77\n"
+
+msgctxt "Game, Game Resource, a natural material from tree"
+msgid "RESOURCE_WOOD"
+msgstr "Wood"
+
+msgctxt "Game, Game Resource, Currency as a means of circulation in economic activities"
+msgid "RESOURCE_CURRENCY"
+msgstr "Currency"
+

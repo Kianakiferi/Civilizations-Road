@@ -1,6 +1,6 @@
 using System;
 
-namespace CivilizationsRoad.Scripts.Program.Exceptions;
+namespace CivilizationsRoad.Scripts.Exceptions;
 public class ArgumentException : Exception
 {
     public ArgumentException() { }
@@ -11,7 +11,9 @@ public class ArgumentException : Exception
     {
         if (string.IsNullOrEmpty(argument))
         {
-            throw new System.ArgumentException($"{Localizations.Strings.Program.ErrorMessages.ArgumentExceptionValueNotNull}: => {nameof(argument)}");
+            var message = Godot.TranslationServer.Translate(Localizations.Strings.Exceptions.Arguments.Key_ArgumentExceptionStringIsNullOrEmpty);
+            
+            throw new ArgumentException($"{message}: => {nameof(argument)}");
         }
     }
 };

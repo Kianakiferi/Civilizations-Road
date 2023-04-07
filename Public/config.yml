@@ -1,0 +1,11 @@
+# 文明之路 Civilizations Road 配置文件
+version: 2023-0407
+debug: true
+language: zh_CN
+
+graphics:
+  target-frame-rate: 60
+  vsync-mode: Enabled
+
+ui:
+  display-fps-counter: true

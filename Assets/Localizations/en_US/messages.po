@@ -1,0 +1,23 @@
+# Don't remove the two lines below, they're required for gettext to work correctly.
+msgid ""
+msgstr ""
+"Project-Id-Version: civilizations-road\n"
+"PO-Revision-Date: 2023-04-07 03:16\n"
+"Last-Translator: <EMAIL@ADDRESS>\n"
+"Language-Team: English, United States\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-SourceKey: msgstr\n"
+"X-Crowdin-Project: civilizations-road\n"
+"X-Crowdin-Project-ID: 578901\n"
+"X-Crowdin-Language: en-US\n"
+"X-Crowdin-File: /zh_CN/messages.po\n"
+"X-Crowdin-File-ID: 81\n"
+
+msgctxt "Message, 'Hello, Godot!' message"
+msgid "GREETING"
+msgstr "Hello, Godot!"
+

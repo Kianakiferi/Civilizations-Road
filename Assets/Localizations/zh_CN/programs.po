@@ -12,38 +12,42 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-SourceKey: msgstr\n"
 
-msgctxt "UI, Game Main Screen, Button label. Start game"
+msgctxt "UI, Game Main Screen, Button label, Start game"
 msgid "PROGRAM_MAIN_START_GAME"
 msgstr "开始游戏"
 
-msgctxt "UI, Game Main Screen, Button label. Begin a new game"
+msgctxt "UI, Game Main Screen, Button label, Begin a new game"
 msgid "PROGRAM_MAIN_NEW_GAME"
 msgstr "新游戏"
 
-msgctxt "UI, Game Main Screen, Button label. Continue last game"
+msgctxt "UI, Game Main Screen, Button label, Continue last game"
 msgid "PROGRAM_MAIN_CONTINUE_GAME"
 msgstr "继续游戏"
 
-msgctxt "UI, Game Main Screen, Button label. Multiplayer mode"
+msgctxt "UI, Game Main Screen, Button label, Multiplayer mode"
 msgid "PROGRAM_MAIN_MULTIPLAYER"
 msgstr "多人游戏"
 
-msgctxt "UI, Game Main Screen, Button label. Game built-in editor"
+msgctxt "UI, Game Main Screen, Button label, Game built-in editor"
 msgid "PROGRAM_MAIN_EDITOR"
 msgstr "编辑器"
 
-msgctxt "UI, Game Main Screen, Button label. Game mods and resources"
+msgctxt "UI, Game Main Screen, Button label, Game mods and resources"
 msgid "PROGRAM_MAIN_MODS_AND_RESOURCES"
 msgstr "模组和资源"
 
-msgctxt "UI, Game Main Screen, Button label. Options or settings of this game"
+msgctxt "UI, Game Main Screen, Button label, Options or settings of this game"
 msgid "PROGRAM_MAIN_OPTIONS"
 msgstr "选项"
 
-msgctxt "UI, Game Main Screen, Button label. About this game"
+msgctxt "UI, Game Main Screen, Button label, About this game"
 msgid "PROGRAM_MAIN_ABOUT"
 msgstr "关于"
 
-msgctxt "UI, Game Main Screen, Button label. Exit game"
+msgctxt "UI, Game Main Screen, Button label, Exit game"
 msgid "PROGRAM_MAIN_EXIT"
 msgstr "退出游戏"
+
+msgctxt "Log, Game loading, Print this when game finishes loading "
+msgid "PROGRAM_LOAD_COMPLETE"
+msgstr "加载完毕"

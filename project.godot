@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Civilizations-Road"
-run/main_scene="res://Scenes/Program/ProgramLoading.tscn"
+run/main_scene="res://Views/Scenes/Program/ProgramLoading.tscn"
 config/features=PackedStringArray("4.0", "C#", "Mobile")
 run/max_fps=256
 run/low_processor_mode=true
@@ -20,7 +20,7 @@ boot_splash/minimum_display_time=50
 
 [autoload]
 
-FpsCounter="*res://Components/Program/FPSCounter.tscn"
+FpsCounter="*res://Views/Components/Program/FPSCounter.cs"
 
 [display]
 

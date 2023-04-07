@@ -16,8 +16,9 @@ msgctxt "Game, Game Resource, a natural material from tree"
 msgid "RESOURCE_WOOD"
 msgstr "木材"
 
+##大流克 Daric
 msgctxt ""
 "Game, Game Resource, Currency as a means of circulation in economic "
 "activities"
 msgid "RESOURCE_CURRENCY"
-msgstr "货币"
+msgstr "货币" 

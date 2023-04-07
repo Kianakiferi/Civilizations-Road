@@ -1,0 +1,55 @@
+# Don't remove the two lines below, they're required for gettext to work correctly.
+msgid ""
+msgstr ""
+"Project-Id-Version: civilizations-road\n"
+"PO-Revision-Date: 2023-04-07 03:16\n"
+"Last-Translator: <EMAIL@ADDRESS>\n"
+"Language-Team: English, United States\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-SourceKey: msgstr\n"
+"X-Crowdin-Project: civilizations-road\n"
+"X-Crowdin-Project-ID: 578901\n"
+"X-Crowdin-Language: en-US\n"
+"X-Crowdin-File: /zh_CN/program.po\n"
+"X-Crowdin-File-ID: 69\n"
+
+msgctxt "UI, Game Main Screen, Button label. Start game"
+msgid "PROGRAM_MAIN_START_GAME"
+msgstr "Start Game"
+
+msgctxt "UI, Game Main Screen, Button label. Begin a new game"
+msgid "PROGRAM_MAIN_NEW_GAME"
+msgstr "New Game"
+
+msgctxt "UI, Game Main Screen, Button label. Continue last game"
+msgid "PROGRAM_MAIN_CONTINUE_GAME"
+msgstr "Continue Game"
+
+msgctxt "UI, Game Main Screen, Button label. Multiplayer mode"
+msgid "PROGRAM_MAIN_MULTIPLAYER"
+msgstr "Multiplayer"
+
+msgctxt "UI, Game Main Screen, Button label. Game built-in editor"
+msgid "PROGRAM_MAIN_EDITOR"
+msgstr "Editor"
+
+msgctxt "UI, Game Main Screen, Button label. Game mods and resources"
+msgid "PROGRAM_MAIN_MODS_AND_RESOURCES"
+msgstr "Mods and Resources"
+
+msgctxt "UI, Game Main Screen, Button label. Options or settings of this game"
+msgid "PROGRAM_MAIN_OPTIONS"
+msgstr "Options"
+
+msgctxt "UI, Game Main Screen, Button label. About this game"
+msgid "PROGRAM_MAIN_ABOUT"
+msgstr "About"
+
+msgctxt "UI, Game Main Screen, Button label. Exit game"
+msgid "PROGRAM_MAIN_EXIT"
+msgstr "Exit Game"
+

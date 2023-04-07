@@ -1,7 +1,7 @@
 using Godot;
 
-namespace CivilizationsRoad.Scripts.Common.Program;
-
+namespace CivilizationsRoad.Scripts.Programs;
+// TODO: 起一个新名字
 public static class FrameRateHelper
 {
     public static float GetScreenRefreshRate() => DisplayServer.ScreenGetRefreshRate();

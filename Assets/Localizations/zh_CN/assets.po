@@ -1,0 +1,50 @@
+# Don't remove the two lines below, they're required for gettext to work correctly.
+msgid ""
+msgstr ""
+"Project-Id-Version: Civilizations-Road-1.0.0\n"
+"PO-Revision-Date: 2023-04-05 03:45+0800\n"
+"Last-Translator: <EMAIL@ADDRESS>\n"
+"Language-Team: Chinese (simplified)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-SourceKey: msgstr\n"
+
+msgctxt "Assets, Music, A song named 'Grassland Night'"
+msgid "MUSIC_Grassland_Night"
+msgstr "草原之夜"
+
+msgctxt "Assets, Music, A song named 'Lift Up Your Veil'"
+msgid "Music_Lift_Up_Your_Veil"
+msgstr "掀起你的盖头来"
+
+# 改编自'古丽碧塔'
+msgctxt "Assets, Music, A song name 'Why are the flowers so red?'"
+msgid "MUSIC_Why_Are_the_Flowers_So_Red?"
+msgstr "花儿为什么这样红"
+
+msgctxt "Context"
+msgid "Key"
+msgstr "萨拉姆毛主席"
+
+msgctxt "Assets, Music, A song named 'Song of Karamay'"
+msgid "MUSIC_Song_of_Karamay"
+msgstr "克拉玛依之歌"
+
+msgctxt "Context"
+msgid "Key"
+msgstr "古丽亚尔汗"
+
+msgctxt "Context"
+msgid "Key"
+msgstr "Ma ra bas"
+
+msgctxt "Assets, Music, A song name 'In that Faraway Place'"
+msgid "MUSIC_In_that_Farawy_Place"
+msgstr "在那遥远的地方"
+
+msgctxt "Context"
+msgid "Key"
+msgstr "青春舞曲"

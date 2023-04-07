@@ -1,0 +1,48 @@
+{
+	// Place your Civilizations-Road 工作区 snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+    "Po-Item": {
+        "prefix": "po",
+        "body": [
+            "msgctxt \"${1:Context}\"",
+            "msgid \"${2:Key}\"",
+            "msgstr \"${3:Text}\"",
+            "${0}"
+        ],
+        "description": "Po-Item"
+    },
+    "Po-File": {
+        "prefix": "newpo",
+        "body": [
+            "# Don't remove the two lines below, they're required for gettext to work correctly.",
+            "msgid \"\"",
+            "msgstr \"\"",
+            "\"Project-Id-Version: Civilizations-Road-1.0.0\n\"",
+            "\"PO-Revision-Date: 2023-04-05 03:45+0800\n\"",
+            "\"Last-Translator: <EMAIL@ADDRESS>\n\"",
+            "\"Language-Team: Chinese (simplified)\n\"",
+            "\"Language: zh_CN\n\"",
+            "\"MIME-Version: 1.0\n\"",
+            "\"Content-Type: text/plain; charset=UTF-8\n\"",
+            "\"Content-Transfer-Encoding: 8bit\n\"",
+            "\"Plural-Forms: nplurals=1; plural=0;\n\"",
+            "\"X-Crowdin-SourceKey: msgstr\n\"",
+            ""
+        ],
+        "description": "Po-File"
+    }
+}

@@ -9,7 +9,7 @@ public class Asset
         get { return _key; }
         set
         {
-            Scripts.Program.Exceptions.ArgumentException.ThrowIfNullOrEmpty(value);
+            Scripts.Exceptions.ArgumentException.ThrowIfNullOrEmpty(value);
             _key = value;
         }
     }
@@ -19,7 +19,7 @@ public class Asset
         get { return _path; }
         set
         {
-            Scripts.Program.Exceptions.ArgumentException.ThrowIfNullOrEmpty(value);
+            Scripts.Exceptions.ArgumentException.ThrowIfNullOrEmpty(value);
             _path = value;
         }
     }

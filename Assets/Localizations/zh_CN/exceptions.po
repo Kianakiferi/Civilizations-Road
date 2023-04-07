@@ -1,0 +1,25 @@
+# Don't remove the two lines below, they're required for gettext to work correctly.
+msgid ""
+msgstr ""
+"Project-Id-Version: Civilizations-Road-1.0.0\n"
+"PO-Revision-Date: 2023-04-05 03:45+0800\n"
+"Last-Translator: <EMAIL@ADDRESS>\n"
+"Language-Team: Chinese (simplified)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-SourceKey: msgstr\n"
+
+msgctxt "Exception, Error, Throw this if string is null or empty"
+msgid "EXCEPTION_ARUMENT_STRING_IS_NULL_OR_EMPTY"
+msgstr "字符串为 null 或空白"
+
+msgctxt "Exception, Error, Throw this if resource requied is not found or loaded"
+msgid "EXCEPTION_RESOURCE_NOT_FOUND_OR_LOADED"
+msgstr "所需的资源未找到或未加载"
+
+msgctxt "Log, Error, Print this if error happens at try to load resource"
+msgid "EXCEPTION_RESOURCE_TRY_LOAD"
+msgstr "尝试加载此资源时发生错误"

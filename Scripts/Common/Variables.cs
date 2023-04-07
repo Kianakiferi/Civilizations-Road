@@ -13,8 +13,6 @@ public static class Variables
             "res://Scenes/Program/ProgramMain.tscn",
             "res://Scenes/Game/TestGameScene.tscn"
         };
-
-        public static Dictionary<string, Resource> Resources = new();
     }
 
    

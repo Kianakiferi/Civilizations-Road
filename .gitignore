@@ -3,7 +3,6 @@
 .mono/
 
 
-
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
@@ -22,3 +21,5 @@ bld/
 
 # Visual Studio cache/options directory
 .vs/
+
+.config/
