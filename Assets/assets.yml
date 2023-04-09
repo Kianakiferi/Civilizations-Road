@@ -1,0 +1,7 @@
+resources:
+  - 
+    name: ProgramMainScene
+    path: res://Scenes/Program/ProgramMain.tscn
+  -
+    name: TestGameScene
+    path: 

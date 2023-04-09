@@ -1,16 +1,13 @@
 using Godot;
 
-namespace CivilizationsRoad.Scripts.Common;
+namespace CivilizationsRoad.Scripts.Configuration;
 
-public partial class Configuration
+public partial struct Programs
 {
-    public partial struct Programs
+    public struct Graphics
     {
-        public struct Graphics
-        {
-            public static int TargetFrameRate { get; set; } = 60;
+        public static int TargetFrameRate { get; set; } = 60;
 
-            public static DisplayServer.VSyncMode VsyncMode { get; set; } = DisplayServer.VSyncMode.Enabled;
-        }
+        public static DisplayServer.VSyncMode VsyncMode { get; set; } = DisplayServer.VSyncMode.Enabled;
     }
 }

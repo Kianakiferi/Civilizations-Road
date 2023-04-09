@@ -1,4 +1,4 @@
-namespace CivilizationsRoad.Scripts.Models.Program;
+namespace CivilizationsRoad.Models.Program;
 
 public class Rstesource : Asset
 {

@@ -1,13 +1,10 @@
-namespace CivilizationsRoad.Scripts.Common;
+namespace CivilizationsRoad.Scripts.Configuration;
 
-public partial class Configuration
+public partial struct Programs
 {
-    public partial struct Programs
+    public struct  UserInterface
     {
-        public struct  UserInterface
-        {
-            public static bool DisplayFPSCounter { get; set; } = IsDebug;
+        public static bool DisplayFPSCounter { get; set; } = IsDebug;
 
-        }
     }
 }

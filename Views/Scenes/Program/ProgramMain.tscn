@@ -1,67 +1,131 @@
-[gd_scene format=3 uid="uid://d18u1mwlsohrv"]
+[gd_scene load_steps=5 format=3 uid="uid://d18u1mwlsohrv"]
 
-[node name="ProgramMain" type="Node"]
+[ext_resource type="Script" path="res://Views/Scenes/Program/ProgramMain.cs" id="1_hybxn"]
+[ext_resource type="Texture2D" uid="uid://23vwrg1opnhg" path="res://icon.svg" id="2_ru3hw"]
+[ext_resource type="Theme" uid="uid://bcu1e8u5s6idv" path="res://Assets/Themes/DefaultThemeDark.tres" id="3_60f1q"]
+[ext_resource type="Script" path="res://Views/Scenes/Program/LableVersion.cs" id="4_dp70u"]
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="ProgramMain" type="Control"]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 auto_translate = false
 localize_numeral_system = false
+script = ExtResource("1_hybxn")
+metadata/_edit_lock_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+auto_translate = false
+localize_numeral_system = false
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="LogoContainer" type="CenterContainer" parent="MarginContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 0
 auto_translate = false
 localize_numeral_system = false
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Icon" type="TextureRect" parent="MarginContainer/LogoContainer"]
 layout_mode = 2
+texture = ExtResource("2_ru3hw")
+
+[node name="Body" type="Control" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ButtonContainer" type="VBoxContainer" parent="MarginContainer/Body"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -99.5
+offset_right = 128.0
+offset_bottom = 99.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
 auto_translate = false
 localize_numeral_system = false
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_bottom = 16
+theme_override_constants/separation = 4
+alignment = 1
 
-[node name="CenterLogo" type="CenterContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+[node name="ButtonStartGame" type="Button" parent="MarginContainer/Body/ButtonContainer"]
 layout_mode = 2
-auto_translate = false
-localize_numeral_system = false
+theme = ExtResource("3_60f1q")
+text = "PROGRAM_MAIN_START_GAME"
+expand_icon = true
 
-[node name="ButtonContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-auto_translate = false
-localize_numeral_system = false
-
-[node name="PROGRAM_MAIN_START_GAME" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer"]
-layout_mode = 2
-text = "开始游戏"
-
-[node name="PROGRAM_MAIN_CONTINUE_GAME" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer"]
+[node name="ButtonContinue" type="Button" parent="MarginContainer/Body/ButtonContainer"]
 visible = false
 layout_mode = 2
-text = "继续游戏"
+theme = ExtResource("3_60f1q")
+text = "PROGRAM_MAIN_CONTINUE_GAME"
+expand_icon = true
 
-[node name="PROGRAM_MAIN_MULTIPLAYER" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer" groups=["ProgramMainMenu"]]
+[node name="ButtonMultiplay" type="Button" parent="MarginContainer/Body/ButtonContainer"]
 layout_mode = 2
+theme = ExtResource("3_60f1q")
 disabled = true
-text = "多人游戏"
+text = "PROGRAM_MAIN_MULTIPLAYER"
+expand_icon = true
 
-[node name="PROGRAM_MAIN_EDITOR" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer"]
+[node name="ButtonEditor" type="Button" parent="MarginContainer/Body/ButtonContainer"]
 layout_mode = 2
-text = "编辑器"
+theme = ExtResource("3_60f1q")
+text = "PROGRAM_MAIN_EDITOR"
+expand_icon = true
 
-[node name="PROGRAM_MAIN_MODS_AND_RESOURCE" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer" groups=["ProgramMainMenu"]]
+[node name="ButtonExtensions" type="Button" parent="MarginContainer/Body/ButtonContainer"]
 layout_mode = 2
-text = "模组和资源"
+theme = ExtResource("3_60f1q")
+text = "PROGRAM_MAIN_EXTENSIONS"
+expand_icon = true
 
-[node name="PROGRAM_MAIN_OPTIONS" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer" groups=["ProgramMainMenu"]]
+[node name="ButtonOptions" type="Button" parent="MarginContainer/Body/ButtonContainer"]
 layout_mode = 2
-text = "选项"
+theme = ExtResource("3_60f1q")
+text = "PROGRAM_MAIN_OPTIONS"
+expand_icon = true
 
-[node name="PROGRAM_MAIN_ABOUT" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer"]
+[node name="ButtonAbout" type="Button" parent="MarginContainer/Body/ButtonContainer"]
 layout_mode = 2
-text = "关于"
+theme = ExtResource("3_60f1q")
+text = "PROGRAM_MAIN_ABOUT"
+expand_icon = true
 
-[node name="PROGRAM_MAIN_EXIT" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer" groups=["ProgramMainMenu"]]
+[node name="ButtonExit" type="Button" parent="MarginContainer/Body/ButtonContainer"]
 layout_mode = 2
-text = "退出游戏"
+theme = ExtResource("3_60f1q")
+text = "PROGRAM_MAIN_EXIT"
+expand_icon = true
+
+[node name="Footer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+auto_translate = false
+localize_numeral_system = false
+
+[node name="LabelGameName" type="Label" parent="MarginContainer/Footer"]
+layout_mode = 2
+text = "PROGRAM_NAME"
+
+[node name="LableVersion" type="Label" parent="MarginContainer/Footer"]
+layout_mode = 2
+theme = ExtResource("3_60f1q")
+script = ExtResource("4_dp70u")

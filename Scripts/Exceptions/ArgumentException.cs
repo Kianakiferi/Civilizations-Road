@@ -11,7 +11,7 @@ public class ArgumentException : Exception
     {
         if (string.IsNullOrEmpty(argument))
         {
-            var message = Godot.TranslationServer.Translate(Localizations.Strings.Exceptions.Arguments.Key_ArgumentExceptionStringIsNullOrEmpty);
+            var message = Godot.TranslationServer.Translate(Localizations.Exceptions.Arguments.Key_ArgumentExceptionStringIsNullOrEmpty);
             
             throw new ArgumentException($"{message}: => {nameof(argument)}");
         }

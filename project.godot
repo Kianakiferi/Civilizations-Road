@@ -12,21 +12,26 @@ config_version=5
 
 config/name="Civilizations-Road"
 run/main_scene="res://Views/Scenes/Program/ProgramLoading.tscn"
+config/use_custom_user_dir=true
 config/features=PackedStringArray("4.0", "C#", "Mobile")
 run/max_fps=256
 run/low_processor_mode=true
 config/icon="res://icon.svg"
-boot_splash/minimum_display_time=50
 
 [autoload]
 
-FpsCounter="*res://Views/Components/Program/FPSCounter.cs"
+FPSCounter="*res://Views/Components/Program/FPSCounter.tscn"
+
+[debug]
+
+file_logging/enable_file_logging=true
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [dotnet]
 
@@ -34,7 +39,25 @@ project/assembly_name="Civilizations-Road"
 
 [editor]
 
+movie_writer/mjpeg_quality=0.8
 movie_writer/fps=30
+export/convert_text_resources_to_binary=false
+
+[filesystem]
+
+import/fbx/enabled=false
+
+[gui]
+
+theme/custom="res://Assets/Themes/DefaultThemeDark.tres"
+theme/custom_font="res://Assets/Fonts/HarmonyOS_Sans_Regular.ttf"
+theme/default_font_hinting=2
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://Assets/Localizations/en/assets.po", "res://Assets/Localizations/en/civilizations.po", "res://Assets/Localizations/en/exceptions.po", "res://Assets/Localizations/en/game.po", "res://Assets/Localizations/en/maps.po", "res://Assets/Localizations/en/messages.po", "res://Assets/Localizations/en/programs.po", "res://Assets/Localizations/en/tips.po", "res://Assets/Localizations/zh_CN/assets.po", "res://Assets/Localizations/zh_CN/civilizations.po", "res://Assets/Localizations/zh_CN/exceptions.po", "res://Assets/Localizations/zh_CN/game.po", "res://Assets/Localizations/zh_CN/maps.po", "res://Assets/Localizations/zh_CN/messages.po", "res://Assets/Localizations/zh_CN/programs.po", "res://Assets/Localizations/zh_CN/tips.po")
+locale/test="zh_CN"
+locale/locale_filter_mode=0
 
 [physics]
 
@@ -44,4 +67,6 @@ common/physics_ticks_per_second=20
 
 [rendering]
 
+occlusion_culling/bvh_build_quality=1
+driver/threads/thread_model=2
 environment/defaults/default_clear_color=Color(0.117647, 0.117647, 0.117647, 1)

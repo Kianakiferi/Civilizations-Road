@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Godot;
 using CivilizationsRoad.Scripts.Common;
 using CivilizationsRoad.Scripts.Localizations;
@@ -13,110 +14,76 @@ public partial class ProgramLoading : Control
     [Export]
     public int LoadingProgress { get; private set; }
 
-    [Export]
-    public int ResourcesCount { get; private set; }
-
     //private Node rootNode;
     private ProgressBar progressBar;
-    private Dictionary<string, bool> resourcesToLoad;
-
+    private Timer timer;
     public override void _EnterTree()
     {
         Scripts.Programs.FrameRateHelper.SetPhysicsRate(1);
-        PrepareResource();
-        BeginLoadResource();
     }
 
     public override void _Ready()
     {
+        progressBar = GetNode<ProgressBar>("LoadingProgressBar");
+        progressBar.MaxValue = AssetManager.Resources.Count;
+        progressBar.Value = 0;
+
+        AssetManager.PrepareResource();
+
+        _ = AssetManager.LoadResourcesAsync();
+
+        AddProgressBarUpdateTimer();
+        
         // TODO: 移动至 Configration 中
-        SetFPSCounter();
         PlayMainThemeMusic();
     }
 
-    public override void _Process(double delta)
+    private void UpdateProgressBar()
     {
-        try
+        if (!AssetManager.IsLoadComplete)
         {
-            // TODO: 可能的循环超时
-            foreach (var item in resourcesToLoad)
-            {
-                if (item.Value == false)
-                {
-                    if (AssetManager.TryGetResource(item, out Resource resource))
-                    {
-                        AssetManager.Resources.Add(resource.ResourceName, resource);
-                        resourcesToLoad[item.Key] = true;
-                        LoadingProgress++;
-                    }
-                }
-            }
-            if (LoadingProgress == ResourcesCount)
-            {
-                LoadComplete();
-            }
+            progressBar.Value = AssetManager.Resources.Count;
         }
-        catch (Exception e)
+        else
         {
-            // TODO: 细分 catch
-            GD.PrintErr(e.Message);
-        }
-    }
-
-    private void PrepareResource()
-    {
-        resourcesToLoad = GetResources();
-        ResourcesCount = resourcesToLoad.Count;
-    }
-
-    private void BeginLoadResource()
-    {
-        // TODO: 根据资源的类型，分批次加载
-        foreach (var item in resourcesToLoad)
-        {
-            // TODO: 确定CacheMode
-            var error = AssetManager.TryLoadResourceThreaded(item.Key);
-            if (error != Error.Ok)
-            {
-                var message = Godot.TranslationServer.Translate(
-                    Strings.Exceptions.Assets.Key_ResourceTryLoadException
-                );
-                GD.Print($"{message}: {error} => {item.Key}");
-            }
+            timer.Stop();
+            LoadComplete();
         }
     }
 
     private void LoadComplete()
     {
-        if (AssetManager.Resources.ContainsKey(Constants.Programs.ProgramMainSceneName))
+        if (AssetManager.TryGetPackedScene(Constants.Programs.ProgramMainSceneKey, out var scene))
         {
-            var prograMainScene = (PackedScene)
-                AssetManager.Resources[Constants.Programs.ProgramMainSceneName];
-            var message = Godot.TranslationServer.Translate(Strings.Programs.Key_ResourceLoadComplete);
+            CR.PrintLocalized(Scripts.Localizations.Programs.Key_ResourceLoadComplete);
             
-            GD.Print(message);   
-            GetTree().ChangeSceneToPacked(prograMainScene);
-            GetTree().CurrentScene.Free();
+            GetTree().ChangeSceneToPacked(scene);
+            //GetTree().CurrentScene.Free();
         }
         else
         {
-            var message = LocalizationManager.GetTranslatedText(Strings.Exceptions.Assets.Key_ResourceNotFoundOrLoadedException);
-            throw new Scripts.Exceptions.Assets.ResourceNotFoundOrLoadedException(
-                $"{message} => {Constants.Programs.ProgramMainSceneName}"
+            var message = LocalizationManager.GetTranslatedText(Scripts.Localizations.Exceptions.Assets.Key_ResourceNotFoundOrLoadedException);
+            throw new Scripts.Exceptions.Assets.ResourceNotFoundOrLoadedException
+            (
+                CR.FormatMessage(message, Constants.Programs.ProgramMainSceneKey)
             );
         }
-
-         
     }
-    private Dictionary<string, bool> GetResources() =>
-        Variables.Program.ResourcePaths.ToDictionary(i => i, i => false);
-
-    private void SetFPSCounter()
+    
+    private void AddProgressBarUpdateTimer()
     {
-        var fpsCounter = GetNode<Control>(Constants.Programs.AutoLoad.FPSCounterNodePath);
-
-        fpsCounter.Visible = Configuration.Programs.UserInterface.DisplayFPSCounter;
+        timer = new()
+        {
+            WaitTime = 0.05,
+            OneShot = false,
+            Autostart = true
+        };
+        timer.Timeout += UpdateProgressBar;
+        AddChild(timer);
     }
+    
+    private void PlayMainThemeMusic() 
+    { 
 
-    private void PlayMainThemeMusic() { }
+    }
 }

@@ -5,13 +5,12 @@ namespace CivilizationsRoad.Scripts.Common;
 
 public static class Variables
 {
-    
     public static class Program
     {
         public static HashSet<string> ResourcePaths = new()
         {
-            "res://Scenes/Program/ProgramMain.tscn",
-            "res://Scenes/Game/TestGameScene.tscn"
+            "res://Views/Scenes/Program/ProgramMain.tscn",
+            "res://Views/Scenes/Game/TestGameScene.tscn"
         };
     }
 
